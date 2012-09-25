@@ -44,6 +44,7 @@ class ItemTest < Test::Unit::TestCase
     assert(anna.credit==90, "Anna's credit amount should be 90.")
     assert(peter.credit=110, "Peter's credit amount should be 110.")
     assert(!item.active, "Item should be inactive after trade.")
+    assert(item.owner==anna, "Anna should own the item now.")
   end
 
   def test_not_enough_credit

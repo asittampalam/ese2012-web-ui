@@ -28,6 +28,7 @@ module Marketplace
        if item.active && credit >= item.price
          item.owner.sell(item)
          item.active=false
+         item.owner= self
          items.push(item)
          self.credit=credit-item.price
        end
